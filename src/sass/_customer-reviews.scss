@@ -1,14 +1,14 @@
 .reviews {
- 
+ background-color: darkred;
   position: relative;
   height: 707px;
-  @media screen and(min-width:$tablet){
+ /* @media screen and(min-width:$tablet){
     height:620px;
   }
   @media screen and(min-width:$desktop) {
     height:618px;
     background-color: $main-backround-rose;
-  }
+  }*/
 }
 
 .secondary-slider {
@@ -19,7 +19,7 @@
   height: 308px;
   
   background-color: #fafafa;
-  @media screen and(min-width:$tablet) {
+  /*@media screen and(min-width:$tablet) {
     width: 620px;
     height: 164px;
     margin: 19px auto 42px;
@@ -28,7 +28,7 @@
     width: 926px;
     height: 138px;
     margin: 15px auto 34px;
-  }
+  }*/
 
   &::before {
     content: '';
@@ -97,7 +97,7 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: all 500ms linear;
-    @media screen and(min-width:$tablet) {
+    /*@media screen and(min-width:$tablet) {
       top: 47px;
       height: 83px;
       width: 460px;
@@ -105,7 +105,7 @@
     @media screen and(min-width:$desktop) {
       height: 52px;
       width: 750px;
-    }
+    }*/
   }
   &__item:target {
     opacity: 1;
@@ -114,6 +114,7 @@
 .wrapper{
   position: relative;
   height: 607px;
+  background-color: darkmagenta;
 }
 .slider{
   position: relative;
@@ -180,22 +181,26 @@
 
 .testimonials {
     position: absolute;
-    height: inherit;
-    opacity: 0;
+    height:inherit;
+    width: inherit;
+    left: 30%;
+ 
     
+    opacity: 1;
+    background-color: cornflowerblue;
     width: inherit;
     z-index: 0;
     
     transform: scale(1.5);
    
-    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    transition: transform ease-in-out 500ms, opacity ease-in-out 500ms;
       
     
   
   &__foto{
     margin-left: auto;
     margin-right: auto;
-  
+   
     padding-top: 80px;
   }
   &__name {
@@ -205,7 +210,8 @@
 }
 #testimonials-slide1:checked ~.slider >.testimonials-slide1,
 #testimonials-slide2:checked ~.slider >.testimonials-slide2,
-#testimonials-slide3:checked ~.slider >.testimonials-slide3 {
+#testimonials-slide3:checked ~.slider >.testimonials-slide3
+ {
 	opacity: 1;
 	z-index: 1;
 	transform: scale(1);
