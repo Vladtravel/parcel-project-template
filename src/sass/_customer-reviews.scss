@@ -1,5 +1,12 @@
 .reviews {
+ 
+  position: relative;
+  height: 707px;
+  @media screen and(min-width:$tablet){
+    height:620px;
+  }
   @media screen and(min-width:$desktop) {
+    height:618px;
     background-color: $main-backround-rose;
   }
 }
@@ -7,9 +14,10 @@
 .secondary-slider {
   position: relative;
   margin: 29px auto 55px;
+
   width: 280px;
   height: 308px;
-  border: 1px solid #fafafa;
+  
   background-color: #fafafa;
   @media screen and(min-width:$tablet) {
     width: 620px;
@@ -30,7 +38,7 @@
     height: 40px;
     width: 54px;
     border: 1px solid blue;
-    z-index: 1;
+    z-index: 0;
     background-image: url("../images/sprite.svg#untitled");
     background-repeat: no-repeat;
     background-position: center;
@@ -103,15 +111,102 @@
     opacity: 1;
   }
 }
-.testimonials-slide {
+.wrapper{
+  position: relative;
+  height: 607px;
+}
+.slider{
+  position: relative;
+	height: inherit;
+  width: inherit;
+
+  
+
+}
+.wrapper > input {
+	display: none;
+}
+
+
+.wrapper .controls {
+  position: absolute;
+	left: 0;
+  
+	margin-left: -98px;
+
+}
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 12px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 12px;
+
+	border-radius: 50%;
+}
+.wrapper label:after {
+	border: 1px solid  #D9D9D9;
+  background-color:#D9D9D9 ;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -2px;
+	width: 12px;
+
+	border-radius: 50%;
+}
+.wrapper .label {
+
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+
+	border-radius: 50%;
+
+	transition: background ease-in-out .5s;
+}
+.wrapper .label:hover, 
+#testimonials-slide1:checked ~ .controls label:nth-of-type(1),
+#testimonials-slide2:checked ~ .controls label:nth-of-type(2),
+#testimonials-slide3:checked ~ .controls label:nth-of-type(3){
+	background-color: rgb(214, 8, 8);
+
+}
+
+.testimonials {
+    position: absolute;
+    height: inherit;
+    opacity: 0;
+    
+    width: inherit;
+    z-index: 0;
+    
+    transform: scale(1.5);
+   
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+      
+    
+  
+  &__foto{
+    margin-left: auto;
+    margin-right: auto;
+  
+    padding-top: 80px;
+  }
   &__name {
     margin-bottom: 30px;
     text-align: center;
   }
 }
-.testimonials {
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-top: 80px;
+#testimonials-slide1:checked ~.slider >.testimonials-slide1,
+#testimonials-slide2:checked ~.slider >.testimonials-slide2,
+#testimonials-slide3:checked ~.slider >.testimonials-slide3 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
 }
