@@ -1,5 +1,4 @@
 .reviews {
-  position: relative;
   height: 707px;
   width: 100%;
   @media screen and(min-width:$tablet){
@@ -11,12 +10,11 @@
   }
 }
 
-
-   
 .wrapper{
   position: relative;
   height:608px;
   width: 100%;
+  
   @media screen and(min-width:$tablet){
     height: 489px;
   }
@@ -27,13 +25,14 @@
 .slider{
   position: relative;
 	height: inherit;
-  width: inherit;
-  border:1px solid rgb(206, 9, 25);
+  width:100%;
+ 
 }
 .wrapper > input {
 	display: none;
 }
 .wrapper .controls {
+  display: flex;
   position: absolute;
 	left: 50%;
   transform: translateX(-50%);
@@ -44,10 +43,9 @@
 	display: inline-block;
 	height: 13px;
   width: 12px;
-  margin-top:29px;
-  margin-left: 18px;
-	
-	
+}
+.wrapper label:not(:last-child){
+  margin-right: 18px;
 }
 .wrapper label:after {
   display: block;
@@ -59,7 +57,7 @@
   border-radius: 50%;
 }
 
-.wrapper .label:hover, 
+.wrapper label:hover, 
 #testimonials-slide1:checked ~ .controls label:nth-of-type(1),
 #testimonials-slide2:checked ~ .controls label:nth-of-type(2),
 #testimonials-slide3:checked ~ .controls label:nth-of-type(3){
@@ -71,7 +69,7 @@ background-color:  tomato;
 .testimonials {
     position: absolute;
     
-    border:1px solid blue;
+   
     height:inherit;
     width: 280px;
     left: 50%;
@@ -103,24 +101,30 @@ background-color:  tomato;
       }
     }
  &__name {
-      margin-bottom: 30px;
+      margin-top: 17px;
+      margin-bottom: 29px;
       text-align: center;
       @media screen and(min-width:$tablet){
         margin-bottom: 35px;
+        margin-top: 14px;
+      }
+      @media screen and(min-width:$desktop){
         margin-top: 15px;
       }
     }    
     &__background{
-      margin-bottom: 15px;
+      margin-bottom: 34px;
       width: inherit;
       height: 308px;
       border: 1px solid #FAFAFA;
       background-color: #FAFAFA;
       @media screen and(min-width:$tablet){
         height: 164px;
+        margin-bottom: 24px;
       }
       @media screen and(min-width:$desktop){
         height: 138px;
+        margin-bottom: 15px;
       }
       
     }
@@ -131,17 +135,7 @@ background-color:  tomato;
      
       height: 239px;
       width: 157px;
-      @media screen and(min-width:$tablet){
-        height: 106px;
-      width: 544px;
-      margin-top: 30px;
-      }
-      @media screen and(min-width:$desktop){
-        height: 52px;
-        width: 750px;
-        margin-top: 47px;
-      }
-
+      
       text-align: center;
       font-family: DM Sans;
       font-size: 12px;
@@ -156,6 +150,17 @@ background-color:  tomato;
         #fafafa 1px,
         #fafafa 31px
       );
+      @media screen and(min-width:$tablet){
+        height: 106px;
+        width: 544px;
+        margin-top: 30px;
+      }
+      @media screen and(min-width:$desktop){
+        height: 52px;
+        width: 750px;
+        margin-top: 47px;
+      }
+
   
       @media screen and(min-width:$tablet) {
         font-size: 14px;
@@ -164,9 +169,6 @@ background-color:  tomato;
         font-size: 16px;
         line-height: 30px;
       }    
-   
-   
-
 
 }}
 
@@ -192,7 +194,7 @@ background-color:  tomato;
     
     &::after{
       position: absolute;
-     
+      
       content: '';
       top: 0;
        right: 10px;
