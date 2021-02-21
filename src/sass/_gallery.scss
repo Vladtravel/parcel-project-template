@@ -23,7 +23,7 @@
       screen and(min-resolution: 2dppx) {
       background-image: url('../images/tablet/tabletGallery@2x.jpg');
     }
-    @media screen and(min-width:$desktop) {
+    @media screen and(min-width:$tablet) {
       height: 430px;
       background-image: url('../images/desktop/desktopGallery.jpg');
     }
