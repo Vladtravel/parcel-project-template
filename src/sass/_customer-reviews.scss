@@ -1,220 +1,231 @@
 .reviews {
   height: 707px;
   width: 100%;
-  @media screen and(min-width:$tablet){
-    height:620px;
+  @media screen and(min-width:$tablet) {
+    height: 620px;
   }
   @media screen and(min-width:$desktop) {
-    height:618px;
+    height: 618px;
     background-color: $main-backround-rose;
   }
 }
 
-.wrapper{
+.wrapper {
   position: relative;
-  height:608px;
+  height: 608px;
   width: 100%;
-  
-  @media screen and(min-width:$tablet){
+
+  @media screen and(min-width:$tablet) {
     height: 489px;
   }
-  @media screen and(min-width:$desktop){
+  @media screen and(min-width:$desktop) {
     height: 474px;
   }
 }
-.slider{
+.slider {
   position: relative;
-	height: inherit;
-  width:100%;
- 
+  height: inherit;
+  width: 100%;
 }
 .wrapper > input {
-	display: none;
+  display: none;
 }
 .wrapper .controls {
   display: flex;
   position: absolute;
-	left: 50%;
+  left: 50%;
   transform: translateX(-50%);
 }
 .wrapper label {
   position: relative;
-	cursor: pointer;
-	display: inline-block;
-	height: 13px;
+  cursor: pointer;
+  display: inline-block;
+  height: 13px;
   width: 12px;
 }
-.wrapper label:not(:last-child){
+.wrapper label:not(:last-child) {
   margin-right: 18px;
 }
 .wrapper label:after {
   display: block;
-  content: " ";
+  content: ' ';
   height: 12px;
-	width: 13px;
-  
-  background-color:#D9D9D9 ;
+  width: 13px;
+
+  background-color: #d9d9d9;
   border-radius: 50%;
 }
 
-.wrapper label:hover, 
+.wrapper label:hover,
 #testimonials-slide1:checked ~ .controls label:nth-of-type(1),
 #testimonials-slide2:checked ~ .controls label:nth-of-type(2),
-#testimonials-slide3:checked ~ .controls label:nth-of-type(3){
- 
-  background-image: url("../images/sprite.svg#home");
-background-color:  tomato;
+#testimonials-slide3:checked ~ .controls label:nth-of-type(3) {
+  background-image: url('../images/sprite.svg#home');
+  background-color: tomato;
 }
 
 .testimonials {
+  position: absolute;
+
+  height: inherit;
+  width: 280px;
+  left: 50%;
+
+  opacity: 0;
+  z-index: 0;
+
+  transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
+  @media screen and(min-width:$tablet) {
+    width: 620px;
+  }
+  @media screen and(min-width:$desktop) {
+    width: 926px;
+  }
+
+  &__foto {
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 80px;
+    padding-bottom: 29px;
+    @media screen and(min-width:$tablet) {
+      padding-top: 119px;
+      padding-bottom: 19px;
+    }
+    @media screen and(min-width:$desktop) {
+      padding-top: 136px;
+      padding-bottom: 15px;
+    }
+  }
+  &__name {
+    margin-top: 17px;
+    margin-bottom: 29px;
+    text-align: center;
+    @media screen and(min-width:$tablet) {
+      margin-bottom: 35px;
+      margin-top: 14px;
+    }
+    @media screen and(min-width:$desktop) {
+      margin-top: 15px;
+    }
+  }
+  &__background {
+    position: relative;
+    margin-bottom: 34px;
+    width: inherit;
+    height: 308px;
+    border: 1px solid #fafafa;
+    background-color: #fafafa;
+    @media screen and(min-width:$tablet) {
+      height: 164px;
+      margin-bottom: 24px;
+    }
+    @media screen and(min-width:$desktop) {
+      height: 138px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content::before {
     position: absolute;
+    display: block;
+    content: ' ';
+    height: 40px;
+  
+    width: 54px;
+    top: 28px;
+    left: 61px;
+    background-image: url(../images/logo.png);
     
-   
-    height:inherit;
-    width: 280px;
-    left: 50%;
-   
-    opacity: 0;
-    z-index: 0;
-    
-    transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
-    @media screen and(min-width:$tablet){
-      width: 620px;
-    }
-    @media screen and(min-width:$desktop){
-      width: 926px;
-    }
-   
- &__foto{
-      margin-left: auto;
-      margin-right: auto;
-     
-      padding-top: 80px;
-      padding-bottom: 29px;
-      @media screen and(min-width:$tablet){
-        padding-top: 119px;
-        padding-bottom: 19px;
-      }
-      @media screen and(min-width:$desktop){
-        padding-top: 136px;
-        padding-bottom: 15px;
-      }
-    }
- &__name {
-      margin-top: 17px;
-      margin-bottom: 29px;
-      text-align: center;
-      @media screen and(min-width:$tablet){
-        margin-bottom: 35px;
-        margin-top: 14px;
-      }
-      @media screen and(min-width:$desktop){
-        margin-top: 15px;
-      }
-    }    
-    &__background{
-      margin-bottom: 34px;
-      width: inherit;
-      height: 308px;
-      border: 1px solid #FAFAFA;
-      background-color: #FAFAFA;
-      @media screen and(min-width:$tablet){
-        height: 164px;
-        margin-bottom: 24px;
-      }
-      @media screen and(min-width:$desktop){
-        height: 138px;
-        margin-bottom: 15px;
-      }
-      
-    }
- &__content {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 43px;
-     
-      height: 239px;
-      width: 157px;
-      
-      text-align: center;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 31px;
-      letter-spacing: 0em;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+
+    height: 239px;
+    width: 157px;
+
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    background-image: repeating-linear-gradient(
+      to top,
+      #e1e1e1,
+      #e1e1e1 1px,
+     rgba(250,250,250,0.1) 1px,
+     rgba(250,250,250,0.1) 30px
+    );
+    @media screen and(min-width:$tablet) {
+      height: 83px;
+      width: 460px;
+      margin-top: 30px;
+      font-size: 14px;
       background-image: repeating-linear-gradient(
         to top,
         #e1e1e1,
         #e1e1e1 1px,
-        #fafafa 1px,
-        #fafafa 31px
+        rgba(250,250,250,0.9) 1px,
+        rgba(250,250,250,0.9) 28px
       );
-      @media screen and(min-width:$tablet){
-        height: 106px;
-        width: 544px;
-        margin-top: 30px;
-      }
-      @media screen and(min-width:$desktop){
-        height: 52px;
-        width: 750px;
-        margin-top: 47px;
-      }
+    }
+    @media screen and(min-width:$desktop) {
+      height: 52px;
+      width: 750px;
+      margin-top: 47px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
 
-  
-      @media screen and(min-width:$tablet) {
-        font-size: 14px;
-      }
-      @media screen and(min-width:$desktop) {
-        font-size: 16px;
-        line-height: 30px;
-      }    
-
-}}
-
-#testimonials-slide1:checked ~.slider >.testimonials-slide1,
-#testimonials-slide2:checked ~.slider >.testimonials-slide2,
-#testimonials-slide3:checked ~.slider >.testimonials-slide3
- {
-	opacity: 1;
-	z-index: 1;
-	transform: scale(1);
+#testimonials-slide1:checked ~ .slider > .testimonials-slide1,
+#testimonials-slide2:checked ~ .slider > .testimonials-slide2,
+#testimonials-slide3:checked ~ .slider > .testimonials-slide3 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
   transform: translateX(-50%);
 }
-.point{
+.point {
   position: relative;
   display: block;
   width: 4px;
   height: 4px;
-    background-color: #D31342;
-    border-radius:50%;
-    font-size: 0; 
-    margin-left: auto;
-    margin-right: auto;
-    
-    &::after{
-      position: absolute;
-      
-      content: '';
-      top: 0;
-       right: 10px;
-      width: 4px;
-      height: 4px;
-      background-color: #D31342;
-      border-radius: 50%;
-      font-size: 0;  
-      
-    }
-&::before{
-  position: absolute;
-     
-  content: '';
-  top: 0;
-  left: 10px;
-  width: 4px;
-  height: 4px;
-  background-color: #D31342;
+  background-color: #d31342;
   border-radius: 50%;
-  font-size: 0;  
-}
+  font-size: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    position: absolute;
+
+    content: '';
+    top: 0;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: #d31342;
+    border-radius: 50%;
+    font-size: 0;
+  }
+  &::before {
+    position: absolute;
+
+    content: '';
+    top: 0;
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: #d31342;
+    border-radius: 50%;
+    font-size: 0;
+  }
 }
