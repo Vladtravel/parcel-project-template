@@ -1,33 +1,28 @@
 .reviews {
- 
   position: relative;
   height: 707px;
- /* @media screen and(min-width:$tablet){
+  width: 100%;
+  @media screen and(min-width:$tablet){
     height:620px;
   }
   @media screen and(min-width:$desktop) {
     height:618px;
     background-color: $main-backround-rose;
-  }*/
+  }
 }
 
-.secondary-slider {
- 
- 
-}
-    /*@media screen and(min-width:$tablet) {
-      top: 47px;
-      height: 83px;
-      width: 460px;
-    }
-    @media screen and(min-width:$desktop) {
-      height: 52px;
-      width: 750px;
-    }*/
+
+   
 .wrapper{
   position: relative;
-  height: 607px;
-  
+  height:608px;
+  width: 100%;
+  @media screen and(min-width:$tablet){
+    height: 489px;
+  }
+  @media screen and(min-width:$desktop){
+    height: 474px;
+  }
 }
 .slider{
   position: relative;
@@ -97,6 +92,12 @@
     z-index: 0;
     
     transition: transform ease-in-out 250ms, opacity ease-in-out 250ms;
+    @media screen and(min-width:$tablet){
+      width: 620px;
+    }
+    @media screen and(min-width:$desktop){
+      width: 926px;
+    }
    
  &__foto{
       margin-left: auto;
@@ -104,16 +105,34 @@
      
       padding-top: 80px;
       padding-bottom: 29px;
+      @media screen and(min-width:$tablet){
+        padding-top: 119px;
+        padding-bottom: 19px;
+      }
+      @media screen and(min-width:$desktop){
+        padding-top: 136px;
+        padding-bottom: 15px;
+      }
     }
  &__name {
       margin-bottom: 30px;
       text-align: center;
+      @media screen and(min-width:$tablet){
+        margin-bottom: 35px;
+        margin-top: 15px;
+      }
     }    
     &__background{
       width: inherit;
       height: 308px;
       border: 1px solid #FAFAFA;
       background-color: #FAFAFA;
+      @media screen and(min-width:$tablet){
+        height: 164px;
+      }
+      @media screen and(min-width:$desktop){
+        height: 138px;
+      }
       
     }
  &__content {
@@ -123,7 +142,16 @@
      
       height: 239px;
       width: 157px;
-
+      @media screen and(min-width:$tablet){
+        height: 106px;
+      width: 544px;
+      margin-top: 30px;
+      }
+      @media screen and(min-width:$desktop){
+        height: 52px;
+        width: 750px;
+        margin-top: 47px;
+      }
 
       text-align: center;
       font-family: DM Sans;
@@ -148,19 +176,7 @@
         line-height: 30px;
       }    
    
-    &____punkt{
-      margin: 0;
-    }
-      &__pic {
-        
-        height: 10px;
-        width: 10px;
-        float: left;
-        margin: 0 10px;
-        border-radius: 1px solid #12e810;
-        background-color: #10e710;
-        border-radius: 50%;
-      }
+   
 
 
 }}
