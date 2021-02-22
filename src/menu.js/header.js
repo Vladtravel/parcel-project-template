@@ -9,22 +9,19 @@
     refs.modal.classList.toggle('is-hidden');
   }
 
-   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
   }
 })();
 
-(() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault();
+// (() => {
+//   document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+//     e.preventDefault();
 
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            );
-            
-            e.currentTarget.reset();
-          });
-})();
+//     new FormData(e.currentTarget).forEach((value, name) =>
+//       console.log(`${name}: ${value}`),
+//     );
 
+//     e.currentTarget.reset();
+//   });
+// })();
