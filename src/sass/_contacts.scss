@@ -325,7 +325,7 @@
   &:focus,
   &:hover {
     box-shadow: 0 0 5px 0 $text-color-rose inset, 0 0 2px 5px $text-color-rose;
-    outline: none;
+    outline: transparent;
   }
 
   @media screen and (min-width: $tablet) {
@@ -372,7 +372,7 @@
   &:hover {
     box-shadow: 0 0 5px 0 $text-color-rose inset, 0 0 2px 5px $text-color-rose;
     background-color: $background-hero-hover2;
-    outline: none;
+    outline: transparent;
   }
 
   @media screen and (min-width: 768px) {
