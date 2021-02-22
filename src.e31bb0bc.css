@@ -1490,7 +1490,7 @@ p {
   }
 }
 .contacts {
-  background: linear-gradient(to bottom, #ffffff 11%, #fff5f6 6% 100%);
+  background: linear-gradient(to bottom, #ffffff 20%, #fff5f6 6% 100%);
   padding-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
