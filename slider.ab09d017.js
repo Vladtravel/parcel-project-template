@@ -204,7 +204,7 @@ Sim.prototype.dotOn = function (num) {
 };
 
 Sim.prototype.dotOff = function (num) {
-  this.indicatorDotsAll[num].style.cssText = 'background-color:#556; cursor:default;';
+  this.indicatorDotsAll[num].style.cssText = 'background-color:#d31342; cursor:default;';
 };
 
 Sim.initialize = function (that) {
@@ -352,7 +352,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62482" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63381" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
