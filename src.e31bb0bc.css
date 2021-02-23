@@ -1328,6 +1328,14 @@ p {
   }
 }
 
+.contacts__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .reviews {
   padding-top: 123px;
   padding-bottom: 132px;
@@ -1342,6 +1350,14 @@ p {
 }
 
 /* General styles */
+.reviews__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .sim-slider {
   position: relative;
 }
@@ -1502,6 +1518,10 @@ span.sim-dot {
   cursor: pointer;
 }
 
+.dots-svg {
+  fill: #d31342;
+}
+
 .contacts {
   background: linear-gradient(to bottom, #ffffff 5%, #fff5f6 6% 100%);
   padding-bottom: 10px;
@@ -1519,7 +1539,7 @@ span.sim-dot {
   }
 }
 
-.contacts__title {
+.gallery__title {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
