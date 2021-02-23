@@ -182,12 +182,11 @@
   &:hover {
     box-shadow: 0 0 5px 0 $text-color-rose inset, 0 0 2px 5px $text-color-rose;
     background-color: $background-hero-hover2;
-    outline: none;
+    outline: transparent;
   }
   transition: all 250ms ease-in-out;
   &__position {
     margin-top: 25px;
-
 
     @media screen and (min-width: $tablet) {
       margin-top: 60px;
