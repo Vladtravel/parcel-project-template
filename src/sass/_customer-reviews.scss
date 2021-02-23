@@ -2,9 +2,11 @@
 .reviews {
   padding-top: 123px;
   padding-bottom: 132px;
+  background-color: $main-backround-rose;
+  
 
   @media screen and(min-width: 1200px) {
-    background-color: $main-backround-rose;
+    background-color: $text-color-white;;
   }
 
   .pagination {
