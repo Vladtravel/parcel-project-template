@@ -1139,17 +1139,17 @@ p {
 
 .advantages {
   padding: 20px 0 48px;
-  background-color: #ffffff;
+  background-color: #fff5f6;
 }
 @media screen and (min-width: 768px) {
   .advantages {
     padding: 33px 0 71px;
-    background-color: #fff5f6;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages {
     padding: 20px 0 70px;
+    background-color: #ffffff;
   }
 }
 
@@ -1331,6 +1331,7 @@ p {
 .reviews {
   padding-top: 123px;
   padding-bottom: 132px;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .reviews {
