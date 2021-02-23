@@ -1,19 +1,17 @@
-
 .reviews {
   padding-top: 123px;
   padding-bottom: 132px;
-  background-color: $main-backround-rose;
-  
+  background-color: $text-color-white;
 
   @media screen and(min-width: 1200px) {
-    background-color: $text-color-white;;
+    background-color: $main-backround-rose;
   }
 
   .pagination {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
   }
-  
+
   .pagination .slider-dots_item {
     display: block;
     cursor: pointer;
@@ -24,18 +22,15 @@
     text-decoration: none;
   }
 
-  
   .active,
   .dots-svg:hover {
     fill: #d31342;
   }
-
 }
 
 .container .pagination .dots-svg {
   color: grey;
 }
-
 
 .sliderbox {
   text-align: center;
@@ -45,7 +40,6 @@
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-    
   }
   .sliderbox__content {
     position: relative;
@@ -57,37 +51,33 @@
     margin-bottom: 52px;
     padding: 43px 50px 20px 50px;
 
-    @media screen and(min-width:768px) and(max-width:1199px){
+    @media screen and(min-width:768px) and(max-width:1199px) {
       width: 620px;
       height: 164px;
       padding: 47px 36px 28px 60px;
       margin-bottom: 42px;
-      
     }
     @media screen and(min-width: 1200px) {
       width: 926px;
       height: 138px;
       padding: 47px 54px 32px 59px;
       margin-bottom: 34px;
-      
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      
+
       bottom: -15%;
       left: 50%;
       transform: translateX(-20px);
       height: 4px;
       width: 32px;
-      
+
       background-image: url(../images/threedots.png);
       background-repeat: no-repeat;
       background-position: center;
     }
-
-
   }
   .sliderbox__name {
     font-family: DM Sans;
@@ -95,7 +85,7 @@
     font-size: 14px;
     line-height: 1.85;
     margin-bottom: 30px;
-    @media screen and(min-width:768px) and(max-width:1199px){
+    @media screen and(min-width:768px) and(max-width:1199px) {
       font-size: 16px;
       line-height: 1.87;
       margin-bottom: 35px;
@@ -105,9 +95,7 @@
       line-height: 1.85;
       margin-bottom: 35px;
     }
-
   }
-
 }
 
 .sliderbox__content .content__reviews {
@@ -119,7 +107,7 @@
   font-size: 12px;
   line-height: 2.58;
   letter-spacing: 0.04em;
-  @media screen and(min-width:768px) and(max-width:1199px){
+  @media screen and(min-width:768px) and(max-width:1199px) {
     font-size: 14px;
     line-height: 2.14;
   }
@@ -129,19 +117,18 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: -16px;
     left: -26px;
     height: 40px;
     width: 54px;
-    
+
     background-image: url(../images/parentheses.png);
     background-repeat: no-repeat;
     background-position: center;
   }
-
 }
 
 .sliderbox__content .content__reviews:nth-child(1) {
@@ -162,19 +149,17 @@
 }
 @-webkit-keyframes fade {
   from {
-      opacity: .4
+    opacity: 0.4;
   }
   to {
-      opacity: 1
+    opacity: 1;
   }
 }
 @keyframes fade {
   from {
-      opacity: .4
+    opacity: 0.4;
   }
   to {
-      opacity: 1
+    opacity: 1;
   }
 }
-
-
