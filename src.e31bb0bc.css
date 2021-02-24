@@ -674,6 +674,34 @@ p {
     transform: perspective(500px) rotateY(0deg);
   }
 }
+.top-button {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .top-button {
+    display: block;
+    position: fixed;
+    bottom: 150px;
+    right: 3%;
+  }
+  .top-button__link {
+    padding: 15px 20px;
+    border-radius: 50%;
+    z-index: 20;
+    background-color: #ecebeb;
+    transition: background-color 250ms linear;
+  }
+  .top-button__link:hover, .top-button__link:focus, .top-button__link:hover .top-button__svg, .top-button__link:focus .top-button__svg {
+    background-color: #ffb8ca;
+    box-shadow: 0 0 1px 0 #ffa5ba inset, 0 0 1px 1px #ffa5ba;
+    fill: #ffffff;
+  }
+  .top-button__svg {
+    fill: #ffa5ba;
+    transition: fill 250ms linear;
+  }
+}
+
 .prod-container {
   padding-top: 121px;
   padding-bottom: 98px;
@@ -1962,9 +1990,9 @@ span.sim-dot {
   pointer-events: none;
 }
 
-.modal {
+.modale {
   position: absolute;
-  width: 420px;
+  width: 410px;
   height: 600px;
   left: 50%;
   top: 50%;
@@ -1976,12 +2004,12 @@ span.sim-dot {
   overflow-y: scroll;
 }
 @media screen and (min-width: 768px) {
-  .modal {
+  .modale {
     width: 470px;
     height: 609px;
   }
 }
-.modal__title {
+.modale__title {
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
@@ -1995,7 +2023,7 @@ span.sim-dot {
   line-height: 30px;
 }
 @media screen and (max-width: 1199px) {
-  .modal__title {
+  .modale__title {
     line-height: 30px;
   }
 }
@@ -2180,7 +2208,7 @@ span.sim-dot {
 
 .modal {
   position: absolute;
-  width: 420px;
+  width: 410px;
   height: 600px;
   left: 50%;
   top: 50%;
@@ -2188,14 +2216,9 @@ span.sim-dot {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
+  padding: 10px;
   overflow-y: scroll;
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    width: 470px;
-    height: 609px;
-  }
+  overflow-y: hidden;
 }
 .modal__title {
   font-family: DM Sans;
