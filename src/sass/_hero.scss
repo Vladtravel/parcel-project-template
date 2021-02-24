@@ -2,7 +2,6 @@
     background-color: $background-products-rose;
 }
 
-// 21.02.2021 20:00
 .container-hero {
     z-index: 1;
     position: relative;
@@ -24,12 +23,8 @@
         justify-content: space-between;
         margin-top: 100px;
         margin-bottom: 28px;
-        // padding-top: 100px;
-        // padding-bottom: 28px;
     }
     @media screen and (min-width:$desktop) {
-        // padding-top: 170px;
-        // padding-bottom: 44px;
         margin-top: 170px;
         margin-bottom: 44px;
     }
@@ -38,20 +33,16 @@
 .hero-title {
     z-index: 5;
     margin: 140px 0 210px;
-    // padding: 140px 0 210px;
     width: 220px;
     @media screen and(min-width: $tablet) {
         width: 165px;
         margin: 15px 0 50px;
-        // padding: 15px 0 50px;
     }
     @media screen and(min-width: $desktop) {
         width: 280px;
         margin: 15px 0 110px;
-        // padding: 15px 0 110px;
     }
     &__mini {
-        // z-index: 3;
         margin: 0;
         font-family: Titan One;
         font-weight: normal;
@@ -68,7 +59,6 @@
         @media screen and(min-width: $desktop) {
             font-size: 38px;
             line-height: 44px;
-            // temporarily
             margin-bottom: 25px;
         }
     }
@@ -299,11 +289,9 @@
     display: none;
     @media screen and(min-width: $tablet) {
         display: block;
-        // padding-top: 95px;
         margin-top: 95px;
     }
     @media screen and (min-width:$desktop) {
-        // padding-top: 160px;
         margin-top: 160px;
     }
 }
@@ -375,5 +363,35 @@
     }
     100% {
         transform: perspective(500px) rotateY(0deg);
+    }
+}
+
+// кнопка вверх
+.top-button {
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+        position: fixed;
+        bottom: 150px;
+        right: 3%;
+        &__link {
+            padding: 15px 20px;
+            border-radius: 50%;
+            z-index: 20;
+            background-color: $background-hero-hover2;
+            @include transit (background-color);
+            &:hover,
+            &:focus,
+            &:hover .top-button__svg,
+            &:focus .top-button__svg {
+                background-color: $background-products-rose;
+                box-shadow: 0 0 1px 0 $text-color-rose inset, 0 0 1px 1px $text-color-rose;
+                fill: $text-color-white;
+            }
+        }
+        &__svg {
+            fill: $text-color-rose;
+            @include transit (fill);
+        }
     }
 }
