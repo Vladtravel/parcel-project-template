@@ -1,7 +1,7 @@
 <section class="contacts">
   <div class="container" id="Contact">
+    <h3 class="contacts__title">contacts</h3>
     <ul class="contacts__list">
-      <h3 class="contacts__title">contacts</h3>
       <li class="contacts__item">
         <div class="contacts-cafe">
           <p class="contacts__name">CAFE</p>
@@ -124,102 +124,134 @@
     </ul>
 
     <div class="contacts-button">
-      <button class="button-locations" type="button">
+      <button class="button-locations" type="button" modal-openmap>
         Our Locations<svg class="vector-right-white" width="10" height="12">
           <use href="./images/sprite.svg#vector-right-white"></use>
         </svg>
       </button>
-      <button class="button-franchise" type="button">
+      <button class="button-franchise" type="button" modal-open>
         Franchise<svg class="vector-right-red" width="10" height="12">
           <use href="./images/sprite.svg#vector-right-red"></use>
         </svg>
       </button>
+    </div>
 
-      <!-- МОДАЛЬНОЕ МЕНЮ
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <form>
-            <h2 class="modal__title">
-              Оставьте свои данные, мы вам перезвоним
-            </h2>
-            <div class="modal-form">
-              <label class="modal-form__label" for="name">Имя</label>
-              <input
-                class="modal-form__input"
-                type="text"
-                name="name"
-                id="name"
-              />
-              <span class="modal-form__icon"
-                ><svg width="18" height="18">
-                  <use href="./images/sprite2.svg#icon-iconname"></use>
-                </svg>
-              </span>
-            </div>
+    <!-- МОДАЛКА ФРАНЧАЙЗИНГ -->
 
-            <div class="modal-form">
-              <label class="modal-form__label" for="tel">Телефон</label>
-              <input class="modal-form__input" type="tel" name="tel" id="tel" />
-              <span class="modal-form__icon"
-                ><svg width="18" height="18">
-                  <use href="./images/sprite2.svg#icon-icontel"></use>
-                </svg>
-              </span>
-            </div>
+    <div class="backdrop hidden" modal>
+      <div class="modale">
+        <form>
+          <h2 class="modale__title">
+            Leave your details, we will call you back
+          </h2>
+          <div class="modal-form">
+            <label class="modal-form__label" for="name">Full name</label>
+            <input
+              class="modal-form__input"
+              type="text"
+              name="name"
+              id="name"
+            />
+            <span class="modal-form__icon">
+              <svg width="18" height="18">
+                <use href="./images/sprite.svg#icon-iconname"></use>
+              </svg>
+            </span>
+          </div>
 
-            <div class="modal-form">
-              <label class="modal-form__label" for="email">Почта</label>
-              <input
-                class="modal-form__input"
-                type="email"
-                name="email"
-                id="email"
-              />
-              <span class="modal-form__icon"
-                ><svg width="18" height="18">
-                  <use href="./images/sprite2.svg#icon-iconmail"></use>
-                </svg>
-              </span>
-            </div>
+          <div class="modal-form">
+            <label class="modal-form__label" for="tel">Phone</label>
+            <input class="modal-form__input" type="tel" name="tel" id="tel" />
+            <span class="modal-form__icon">
+              <svg width="18" height="18">
+                <use href="./images/sprite.svg#icon-icontel"></use>
+              </svg>
+            </span>
+          </div>
 
-            <div class="modal-form">
-              <label class="modal-form__label" for="comment">Комментарий</label>
-              <textarea
-                class="modal-form__comment"
-                name="comment"
-                id="comment"
-                rows="8"
-                placeholder="Введите текст"
-              ></textarea>
-            </div>
+          <div class="modal-form">
+            <label class="modal-form__label" for="email">E-mail</label>
+            <input
+              class="modal-form__input"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <span class="modal-form__icon">
+              <svg width="18" height="18">
+                <use href="./images/sprite.svg#icon-iconmail"></use>
+              </svg>
+            </span>
+          </div>
 
-            <div class="checkbox">
-              <label class="checkbox__label">
-                <input class="checkbox__input" type="checkbox" name="policy" />
-                <span class="checkbox__icon"></span>
-                Соглашаюсь с рассылкой и принимаю<span
-                  ><a class="agreement" href="">Условия договора</a></span
-                >
-              </label>
-            </div>
+          <div class="modal-form">
+            <label class="modal-form__label" for="comment"> Comments</label>
+            <textarea
+              class="modal-form__comment"
+              name="comment"
+              id="comment"
+              rows="8"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
 
-            <button aria-label="Отправить" class="modal-button" type="submit">
-              Отправить
-            </button>
-          </form>
+          <div class="checkbox">
+            <label class="checkbox__label">
+              <input class="checkbox__input" type="checkbox" name="policy" />
+              <span class="checkbox__icon"></span>
+              I agree with Term and Conditions<span
+                ><a class="agreement" href="">Agreement</a></span
+              >
+            </label>
+          </div>
 
-          <button
-            aria-label="Закрытие окна"
-            class="close-modal"
-            data-modal-close
-            type="button"
-          >
-            <svg width="18" height="18">
-              <use href="./images/sprite.svg#close"></use>
-            </svg>
+          <button aria-label="Отправить" class="modal-button" type="submit">
+            Send
           </button>
-        </div>
+        </form>
+
+        <button
+          aria-label="Закрытие окна"
+          class="close-modal"
+          modal-close
+          type="button"
+        >
+          <svg width="18" height="18">
+            <use href="./images/sprite.svg#icon-closeicon"></use>
+          </svg>
+        </button>
       </div>
-    </div> -->
+    </div>
+
+    <!-- Модалка карта -->
+
+    <div class="backdrop hidd" modalmap>
+      <div class="modal">
+        <form>
+          <h2 class="modal__title">Kiev Center</h2>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.474060495836!2d30.52046351526521!3d50.450896395214556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce50ffa1b91f%3A0x42d5962fe7e791c!2z0JzQsNC50LTQsNC9INCd0LXQt9Cw0LLQuNGB0LjQvNC-0YHRgtC4!5e0!3m2!1sru!2sua!4v1614149506843!5m2!1sru!2sua"
+              width="390"
+              height="540"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </form>
+
+        <button
+          aria-label="Закрытие окна"
+          class="close-modal"
+          modal-closemap
+          type="button"
+        >
+          <svg width="18" height="18">
+            <use href="./images/sprite.svg#icon-closeicon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>

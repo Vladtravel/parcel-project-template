@@ -9,16 +9,15 @@
 .advantages {
   padding: 20px 0 48px;
 
-  background-color: $text-color-white;
+  background-color: $main-backround-rose;
 
   @media screen and (min-width: 768px) {
     padding: 33px 0 71px;
-
-    background-color: $main-backround-rose;
   }
 
   @media screen and (min-width: 1200px) {
     padding: 20px 0 70px;
+    background-color: $text-color-white;
   }
 }
 
