@@ -24,7 +24,7 @@
         margin-top: 100px;
         margin-bottom: 28px;
     }
-    @media screen and (min-width:$desktop) {
+    @media screen and (min-width: $desktop) {
         margin-top: 170px;
         margin-bottom: 44px;
     }
@@ -107,7 +107,7 @@
         font-weight: normal;
         font-size: 8px;
         line-height: 10px;
-        @include transit (background-color);
+        @include transit(background-color);
         @media screen and(min-width: $desktop) {
             font-size: 14px;
             line-height: 18px;
@@ -130,7 +130,7 @@
         font-size: 8px;
         line-height: 10px;
         text-align: center;
-        @include transit (background-color);
+        @include transit(background-color);
         @media screen and(min-width: $desktop) {
             font-size: 14px;
             line-height: 18px;
@@ -140,7 +140,6 @@
         &:focus {
             background-color: $background-hero-hover2;
             box-shadow: 0 0 5px 0 $text-color-rose inset, 0 0 2px 5px $text-color-rose;
-            ;
         }
     }
 }
@@ -291,7 +290,7 @@
         display: block;
         margin-top: 95px;
     }
-    @media screen and (min-width:$desktop) {
+    @media screen and (min-width: $desktop) {
         margin-top: 160px;
     }
 }
@@ -307,7 +306,7 @@
         text-transform: uppercase;
         color: $text-color-chery;
     }
-    @media screen and (min-width:$desktop) {
+    @media screen and (min-width: $desktop) {
         font-size: 46px;
         line-height: 53px;
     }
