@@ -367,31 +367,31 @@
 }
 
 // кнопка вверх
-.top-button {
+.back_to_top {
     display: none;
-    @media screen and (min-width: 1200px) {
+    position: fixed;
+    bottom: 150px;
+    right: 3%;
+    padding: 15px 20px;
+    border-radius: 50%;
+    z-index: 20;
+    background-color: $background-hero-hover2;
+    @include transit (background-color);
+    opacity: 0.6;
+    &:hover,
+    &:focus,
+    &:hover .back_to_top__svg,
+    &:focus .back_to_top__svg {
+        background-color: $background-products-rose;
+        box-shadow: 0 0 1px 0 $text-color-rose inset, 0 0 1px 1px $text-color-rose;
+        fill: $text-color-white;
+        opacity: 1;
+    }
+    &__svg {
+        fill: $text-color-rose;
+        @include transit (fill);
+    }
+    &-show {
         display: block;
-        position: fixed;
-        bottom: 150px;
-        right: 3%;
-        &__link {
-            padding: 15px 20px;
-            border-radius: 50%;
-            z-index: 20;
-            background-color: $background-hero-hover2;
-            @include transit (background-color);
-            &:hover,
-            &:focus,
-            &:hover .top-button__svg,
-            &:focus .top-button__svg {
-                background-color: $background-products-rose;
-                box-shadow: 0 0 1px 0 $text-color-rose inset, 0 0 1px 1px $text-color-rose;
-                fill: $text-color-white;
-            }
-        }
-        &__svg {
-            fill: $text-color-rose;
-            @include transit (fill);
-        }
     }
 }
